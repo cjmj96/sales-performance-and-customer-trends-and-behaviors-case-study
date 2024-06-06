@@ -164,7 +164,7 @@
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
             <attributes>
-              <attribute datatype='string' name='character-set'>&quot;ibm-5348_P100-1997&quot;</attribute>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
               <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
               <attribute datatype='string' name='currency'>&quot;C$&quot;</attribute>
               <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
@@ -515,12 +515,12 @@
       <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
       <column datatype='integer' name='[Row ID]' role='dimension' type='ordinal' />
       <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-      <_.fcp.ObjectModelTableType.true...column caption='Customers.csv' datatype='table' name='[__tableau_internal_object_id__].[Customers.csv_C8434557425640FEB7E61871A8A3C0FE]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='Location.csv' datatype='table' name='[__tableau_internal_object_id__].[Location.csv_71BC742DC37C43149EAEDABB7605EB12]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='Orders.csv' datatype='table' name='[__tableau_internal_object_id__].[Orders.csv_059DF9D889A1420189D2A565442BB7DD]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='Products.csv' datatype='table' name='[__tableau_internal_object_id__].[Products.csv_BCB40AE4C11C44AB8C7F41989F156B0C]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Customers' datatype='table' name='[__tableau_internal_object_id__].[Customers.csv_C8434557425640FEB7E61871A8A3C0FE]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Location' datatype='table' name='[__tableau_internal_object_id__].[Location.csv_71BC742DC37C43149EAEDABB7605EB12]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Orders' datatype='table' name='[__tableau_internal_object_id__].[Orders.csv_059DF9D889A1420189D2A565442BB7DD]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Products' datatype='table' name='[__tableau_internal_object_id__].[Products.csv_BCB40AE4C11C44AB8C7F41989F156B0C]' role='measure' type='quantitative' />
       <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ALEJAN~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0v1rid40qdg2fx140rs7q0cbpa8s.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/06/2024 10:19:49 PM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ALEJAN~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0k38c6t03x99m816diuey1c7epzd.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/06/2024 10:26:58 PM' username='tableau_internal_user'>
           <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Customers.csv_C8434557425640FEB7E61871A8A3C0FE' table='[Extract].[Customers.csv_C8434557425640FEB7E61871A8A3C0FE]' type='table' />
           <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
             <relation name='Orders.csv_059DF9D889A1420189D2A565442BB7DD' table='[Extract].[Orders.csv_059DF9D889A1420189D2A565442BB7DD]' type='table' />
@@ -915,7 +915,7 @@
       </semantic-values>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
-          <object caption='Customers.csv' id='Customers.csv_C8434557425640FEB7E61871A8A3C0FE'>
+          <object caption='Customers' id='Customers.csv_C8434557425640FEB7E61871A8A3C0FE'>
             <properties context=''>
               <relation connection='textscan.1wx5slo04u5g34139f1wo1e6ulmq' name='Customers.csv' table='[Customers#csv]' type='table'>
                 <columns character-set='windows-1252' header='yes' locale='es_NI' separator=';'>
@@ -928,7 +928,7 @@
               <relation name='Customers.csv_C8434557425640FEB7E61871A8A3C0FE' table='[Extract].[Customers.csv_C8434557425640FEB7E61871A8A3C0FE]' type='table' />
             </properties>
           </object>
-          <object caption='Location.csv' id='Location.csv_71BC742DC37C43149EAEDABB7605EB12'>
+          <object caption='Location' id='Location.csv_71BC742DC37C43149EAEDABB7605EB12'>
             <properties context=''>
               <relation connection='textscan.1wx5slo04u5g34139f1wo1e6ulmq' name='Location.csv' table='[Location#csv]' type='table'>
                 <columns character-set='UTF-8' header='yes' locale='es_NI' separator=';'>
@@ -944,7 +944,7 @@
               <relation name='Location.csv_71BC742DC37C43149EAEDABB7605EB12' table='[Extract].[Location.csv_71BC742DC37C43149EAEDABB7605EB12]' type='table' />
             </properties>
           </object>
-          <object caption='Orders.csv' id='Orders.csv_059DF9D889A1420189D2A565442BB7DD'>
+          <object caption='Orders' id='Orders.csv_059DF9D889A1420189D2A565442BB7DD'>
             <properties context=''>
               <relation connection='textscan.1wx5slo04u5g34139f1wo1e6ulmq' name='Orders.csv' table='[Orders#csv]' type='table'>
                 <columns character-set='UTF-8' header='yes' locale='es_NI' separator=';'>
@@ -968,7 +968,7 @@
               <relation name='Orders.csv_059DF9D889A1420189D2A565442BB7DD' table='[Extract].[Orders.csv_059DF9D889A1420189D2A565442BB7DD]' type='table' />
             </properties>
           </object>
-          <object caption='Products.csv' id='Products.csv_BCB40AE4C11C44AB8C7F41989F156B0C'>
+          <object caption='Products' id='Products.csv_BCB40AE4C11C44AB8C7F41989F156B0C'>
             <properties context=''>
               <relation connection='textscan.1wx5slo04u5g34139f1wo1e6ulmq' name='Products.csv' table='[Products#csv]' type='table'>
                 <columns character-set='windows-1252' header='yes' locale='es_NI' separator=';'>
