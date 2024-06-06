@@ -513,6 +513,7 @@
       <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
       <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code (Location.csv)]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
       <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column datatype='string' name='[Region]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
       <column datatype='integer' name='[Row ID]' role='dimension' type='ordinal' />
       <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
       <_.fcp.ObjectModelTableType.true...column caption='Customers' datatype='table' name='[__tableau_internal_object_id__].[Customers.csv_C8434557425640FEB7E61871A8A3C0FE]' role='measure' type='quantitative' />
@@ -520,7 +521,7 @@
       <_.fcp.ObjectModelTableType.true...column caption='Orders' datatype='table' name='[__tableau_internal_object_id__].[Orders.csv_059DF9D889A1420189D2A565442BB7DD]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='Products' datatype='table' name='[__tableau_internal_object_id__].[Products.csv_BCB40AE4C11C44AB8C7F41989F156B0C]' role='measure' type='quantitative' />
       <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ALEJAN~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0k38c6t03x99m816diuey1c7epzd.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/06/2024 10:26:58 PM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ALEJAN~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0pux8mr0u9ad9q1h1dhnf1wfluv0.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/06/2024 10:36:40 PM' username='tableau_internal_user'>
           <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Customers.csv_C8434557425640FEB7E61871A8A3C0FE' table='[Extract].[Customers.csv_C8434557425640FEB7E61871A8A3C0FE]' type='table' />
           <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
             <relation name='Orders.csv_059DF9D889A1420189D2A565442BB7DD' table='[Extract].[Orders.csv_059DF9D889A1420189D2A565442BB7DD]' type='table' />
@@ -913,6 +914,22 @@
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Nicaragua&quot;' />
       </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Row ID' />
+        <field-sort-custom-order field='Order ID' />
+        <field-sort-custom-order field='Order Date' />
+        <field-sort-custom-order field='Calculation_484136986307837952' />
+        <field-sort-custom-order field='Ship Date' />
+        <field-sort-custom-order field='Ship Mode' />
+        <field-sort-custom-order field='Customer ID' />
+        <field-sort-custom-order field='Segment' />
+        <field-sort-custom-order field='Postal Code' />
+        <field-sort-custom-order field='Product ID' />
+        <field-sort-custom-order field='Sales' />
+        <field-sort-custom-order field='Quantity' />
+        <field-sort-custom-order field='Discount' />
+        <field-sort-custom-order field='Profit' />
+      </field-sort-info>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
           <object caption='Customers' id='Customers.csv_C8434557425640FEB7E61871A8A3C0FE'>
@@ -1057,6 +1074,13 @@
           </strip>
         </edge>
       </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xtpfv419qxtd811hjx5a14bnp8d].[usr:Calculation_484136986307837952:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
       <simple-id uuid='{D9DC27EE-46B0-4013-B6C9-868C0B4AC4FA}' />
     </window>
   </windows>
