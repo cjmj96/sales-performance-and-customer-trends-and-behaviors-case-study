@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
 <!-- build 20242.24.0711.1636                               -->
-<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
     <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
@@ -22,6 +22,7 @@
     <ZoneBackgroundTransparency />
     <ZoneFriendlyName />
   </document-format-change-manifest>
+  <repository-location id='sales-and-customers-dashboard' path='/workbooks' revision='1.2' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -48,7 +49,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='Customers' name='textscan.1wx5slo04u5g34139f1wo1e6ulmq'>
-            <connection class='textscan' directory='D:/Documentos/Code/sales-performance-and-customer-trends-and-behaviors-case-study/data' filename='Customers.csv' password='' server='' />
+            <connection class='textscan' directory='D:/Documentos/Code/sales-performance-and-customer-trends-and-behaviors-case-study/data' filename='Customers.csv' password='' server='' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1wx5slo04u5g34139f1wo1e6ulmq' name='Customers.csv' table='[Customers#csv]' type='table'>
@@ -734,7 +735,7 @@
         </groupfilter>
       </group>
       <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ALEJAN~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1u299mv1b5qoqi154d5881cchkp0.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/20/2024 10:37:28 PM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ALEJAN~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0jghw6s0xaw4jt1fasyp31om24hn.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/20/2024 10:53:17 PM' username='tableau_internal_user'>
           <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Customers.csv_C8434557425640FEB7E61871A8A3C0FE' table='[Extract].[Customers.csv_C8434557425640FEB7E61871A8A3C0FE]' type='table' />
           <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
             <relation name='Orders.csv_059DF9D889A1420189D2A565442BB7DD' table='[Extract].[Orders.csv_059DF9D889A1420189D2A565442BB7DD]' type='table' />
@@ -1126,22 +1127,6 @@
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[usr:Calculation_1181913455329218560:nk]' type='palette'>
-            <map to='#1da2d0'>
-              <bucket>&quot;above&quot;</bucket>
-            </map>
-            <map to='#ff5500'>
-              <bucket>&quot;below&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[usr:KPI Sales Avg (copy)_1181913455338496001:nk]' type='palette'>
-            <map to='#1da2d0'>
-              <bucket>&quot;above&quot;</bucket>
-            </map>
-            <map to='#ff5500'>
-              <bucket>&quot;below&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
             <map to='#212121'>
               <bucket>&quot;[federated.1xtpfv419qxtd811hjx5a14bnp8d].[avg:CY Profit (copy)_174233037312184321:qk]&quot;</bucket>
@@ -1268,6 +1253,22 @@
             </map>
             <map to='#ff9d9a'>
               <bucket>&quot;[federated.1xtpfv419qxtd811hjx5a14bnp8d].[sum:Calculation_1063975438337585154:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Calculation_1181913455329218560:nk]' type='palette'>
+            <map to='#1da2d0'>
+              <bucket>&quot;above&quot;</bucket>
+            </map>
+            <map to='#ff5500'>
+              <bucket>&quot;below&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:KPI Sales Avg (copy)_1181913455338496001:nk]' type='palette'>
+            <map to='#1da2d0'>
+              <bucket>&quot;above&quot;</bucket>
+            </map>
+            <map to='#ff5500'>
+              <bucket>&quot;below&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -4268,7 +4269,7 @@ Profit of <[federated.1xtpfv419qxtd811hjx5a14bnp8d].[attr:Calculation_1787366369
               </zone>
             </zone>
             <zone h='3000' id='49' name='Legend KPI' show-title='false' w='100000' x='0' y='11375'>
-              <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+              <layout-cache type-h='cell' type-w='fixed' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -4621,8 +4622,8 @@ Profit of <[federated.1xtpfv419qxtd811hjx5a14bnp8d].[attr:Calculation_1787366369
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='3050' minheight='3050' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='156' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='155' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
+            <zone h='100000' id='162' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='161' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
                 <zone fixed-size='772' h='11375' id='16' type-v2='dashboard-object' w='8833' x='72167' y='-125'>
                   <button action='tabdoc:goto-sheet window-id=&quot;{2A1F2673-81E3-4580-9BEA-72A6DF6BB031}&quot;'>
                     <button-visual-state>
@@ -4677,7 +4678,7 @@ Profit of <[federated.1xtpfv419qxtd811hjx5a14bnp8d].[attr:Calculation_1787366369
                   </zone-style>
                 </zone>
                 <zone fixed-size='280' h='3000' id='49' is-fixed='true' name='Legend KPI' show-title='false' w='100000' x='0' y='11375'>
-                  <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                  <layout-cache type-h='cell' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5324,8 +5325,8 @@ Profit of <[federated.1xtpfv419qxtd811hjx5a14bnp8d].[attr:Calculation_1787366369
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2750' minheight='2750' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='139' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='138' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
+            <zone h='100000' id='145' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='144' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
                 <zone fixed-size='772' h='11375' id='16' type-v2='dashboard-object' w='8833' x='72167' y='-125'>
                   <button action='tabdoc:goto-sheet window-id=&quot;{2A1F2673-81E3-4580-9BEA-72A6DF6BB031}&quot;'>
                     <button-visual-state>
@@ -5380,7 +5381,7 @@ Profit of <[federated.1xtpfv419qxtd811hjx5a14bnp8d].[attr:Calculation_1787366369
                   </zone-style>
                 </zone>
                 <zone fixed-size='280' h='3000' id='49' is-fixed='true' name='Legend KPI' show-title='false' w='100000' x='0' y='11375'>
-                  <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                  <layout-cache type-h='cell' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5790,7 +5791,7 @@ Profit of <[federated.1xtpfv419qxtd811hjx5a14bnp8d].[attr:Calculation_1787366369
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='32' />
+      <active id='-1' />
       <simple-id uuid='{2A1F2673-81E3-4580-9BEA-72A6DF6BB031}' />
     </window>
     <window class='dashboard' name='Customer Dashboard'>
